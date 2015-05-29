@@ -200,7 +200,7 @@ MAKE_SYSTEM_PROP(ACTIVITY_CUSTOM, 100);
         if(image != nil){
             return image;
         }
-        NSLog(@"image NOT found");
+        NSLog(@"image NOT found %@", imagePath);
     }
     return nil;
 }
@@ -793,33 +793,116 @@ MAKE_SYSTEM_PROP(ACTIVITY_CUSTOM, 100);
         [avc setExcludedActivityTypes:excludedIcons];
     }
     
-	// Completion Block Handler
-    [avc setCompletionHandler:^(NSString *act, BOOL done) {
-		if (!done) {
-			NSDictionary *event = @{
-				@"success": @NO,
-				@"platform": @"activityView",
-			};
-			[self fireEvent:@"cancelled" withObject:event];
-		} else {
-			// RKS NOTE: Here we must verify if is a CustomActivity or not
-			// to returns ACTIVITY_CUSTOM constant
-			NSInteger activity;
-			if ([act rangeOfString:@"com.apple.UIKit.activity"].location == NSNotFound) {
-				activity = 100;
-			} else {
-				activity = act;
-			}
-
-			NSDictionary *event = @{
-				@"success": @YES,
-				@"platform": @"activityView",
-				@"activity": NUMLONG(activity),
-				@"activityName": act
-			};
-			[self fireEvent:@"complete" withObject:event];
-		}
-	}];
+    NSLog(@"Try to set complete Handler");
+    
+    if ([arguments objectForKey:@"cancel"] != nil) {
+        
+        if (cancelCallback) {
+            NSLog(@"try to release old listener");
+            [cancelCallback release];
+            cancelCallback = nil;
+        }
+        
+        cancelCallback = [arguments objectForKey:@"cancel"];
+        ENSURE_TYPE_OR_NIL(cancelCallback,KrollCallback);
+        [cancelCallback retain];
+    }
+    
+    if ([arguments objectForKey:@"success"] != nil) {
+        
+        
+        if (successCallback) {
+            NSLog(@"try to release old listener");
+            [successCallback release];
+            successCallback = nil;
+        }
+        
+        successCallback = [arguments objectForKey:@"success"];
+        ENSURE_TYPE_OR_NIL(successCallback,KrollCallback);
+        [successCallback retain];
+    }
+    
+    if ([TiUtils isIOS8OrGreater]) {
+        [avc setCompletionWithItemsHandler:^(NSString *act, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+            NSLog(@"on Complete activityType %@", act);
+            NSLog(@"on Complete completed %d", completed);
+            NSLog(@"on Complete returnedItems %@", returnedItems);
+            NSLog(@"on Complete activityError %@", activityError);
+            
+            if (!completed) {
+                NSDictionary *event = @{
+                                        @"success": @NO,
+                                        @"platform": @"activityView",
+                                        };
+                
+//                [self fireEvent:@"cancelled" withObject:event];
+                
+                id listener = [[cancelCallback retain] autorelease];
+                
+//                NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+                [self _fireEventToListener:@"error" withObject:event listener:listener thisObject:nil];
+                
+            } else {
+                // RKS NOTE: Here we must verify if is a CustomActivity or not
+                // to returns ACTIVITY_CUSTOM constant
+                NSInteger activity;
+//                if ([act rangeOfString:@"com.apple.UIKit.activity"].location == NSNotFound) {
+                    activity = 100;
+//                } else {
+//                    activity = act;
+//                }
+                
+                NSDictionary *event = @{
+                                        @"success": @YES,
+                                        @"platform": @"activityView",
+                                        @"activity": NUMLONG(activity),
+                                        @"activityName": act
+                                        };
+//                [self fireEvent:@"complete" withObject:event];
+                
+                
+                
+                id listener = [[successCallback retain] autorelease];
+                
+                //                NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+                [self _fireEventToListener:@"error" withObject:event listener:listener thisObject:nil];
+            }
+            
+        }];
+    } else {
+        
+        // Completion Block Handler
+        [avc setCompletionHandler:^(NSString *act, BOOL completed) {
+            
+            NSLog(@"on Complete %@, %d", act, completed);
+            
+            if (!completed) {
+                NSDictionary *event = @{
+                                        @"success": @NO,
+                                        @"platform": @"activityView",
+                                        };
+                
+                [self fireEvent:@"cancelled" withObject:event];
+            } else {
+                // RKS NOTE: Here we must verify if is a CustomActivity or not
+                // to returns ACTIVITY_CUSTOM constant
+                NSInteger activity;
+                if ([act rangeOfString:@"com.apple.UIKit.activity"].location == NSNotFound) {
+                    activity = 100;
+                } else {
+                    activity = act;
+                }
+                
+                NSDictionary *event = @{
+                                        @"success": @YES,
+                                        @"platform": @"activityView",
+                                        @"activity": NUMLONG(activity),
+                                        @"activityName": act
+                                        };
+                [self fireEvent:@"complete" withObject:event];
+            }
+        }];
+    }
     
 	// Show ActivityViewController
     [[TiApp app] showModalController:avc animated:YES];
