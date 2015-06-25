@@ -22,17 +22,33 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0D1D55A91B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1D55A71B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.h */; };
+		0D1D55AA1B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D55A81B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		0DB954751B3BB7CD0087BF8A /* SSArgumentsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB954731B3BB7CD0087BF8A /* SSArgumentsParser.h */; };
+		0DB954761B3BB7CD0087BF8A /* SSArgumentsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB954741B3BB7CD0087BF8A /* SSArgumentsParser.m */; };
+		0DB954791B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB954771B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.h */; };
+		0DB9547A1B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB954781B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.m */; };
+		0DB9547D1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB9547B1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.h */; };
+		0DB9547E1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9547C1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.m */; };
+		0DB954811B3BF6AA0087BF8A /* SSUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB9547F1B3BF6AA0087BF8A /* SSUtil.h */; };
+		0DB954821B3BF6AA0087BF8A /* SSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB954801B3BF6AA0087BF8A /* SSUtil.m */; };
+		0DB954851B3BF8010087BF8A /* SSActivityModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB954831B3BF8010087BF8A /* SSActivityModule.h */; };
+		0DB954861B3BF8010087BF8A /* SSActivityModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB954841B3BF8010087BF8A /* SSActivityModule.m */; };
+		0DB954911B3BF8910087BF8A /* SSNetworkModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB9548F1B3BF8910087BF8A /* SSNetworkModule.h */; };
+		0DB954921B3BF8910087BF8A /* SSNetworkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB954901B3BF8910087BF8A /* SSNetworkModule.m */; };
+		0DE6CCC31B204D5000F8BE96 /* UIActivityLocationtemProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE6CCC11B204D5000F8BE96 /* UIActivityLocationtemProvider.h */; };
+		0DE6CCC41B204D5000F8BE96 /* UIActivityLocationtemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6CCC21B204D5000F8BE96 /* UIActivityLocationtemProvider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		24DD6CF91134B3F500162E58 /* DkNappSocialModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* DkNappSocialModule.h */; };
-		24DD6CFA1134B3F500162E58 /* DkNappSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DkNappSocialModule.m */; };
+		24DD6CFA1134B3F500162E58 /* DkNappSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DkNappSocialModule.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		24DE9E1111C5FE74003F90F6 /* DkNappSocialModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* DkNappSocialModuleAssets.h */; };
-		24DE9E1211C5FE74003F90F6 /* DkNappSocialModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* DkNappSocialModuleAssets.m */; };
+		24DE9E1211C5FE74003F90F6 /* DkNappSocialModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* DkNappSocialModuleAssets.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		69B6065A15A4DC5600AB991D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B6065715A4DC4800AB991D /* Social.framework */; };
 		AA747D9F0F9514B9006C5449 /* DkNappSocial_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* DkNappSocial_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B603B54D1700E18B002E4196 /* NappCustomActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = B603B54B1700E18B002E4196 /* NappCustomActivity.h */; };
-		B603B54E1700E18B002E4196 /* NappCustomActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B603B54C1700E18B002E4196 /* NappCustomActivity.m */; };
+		B603B54E1700E18B002E4196 /* NappCustomActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B603B54C1700E18B002E4196 /* NappCustomActivity.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B663690D17C29D03008AD704 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66EFA9016137E8100A5A9B4 /* Accounts.framework */; };
-		DE2F4E581A41FA5B002B4204 /* NappItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2F4E561A41FA5B002B4204 /* NappItemProvider.m */; };
+		DE2F4E581A41FA5B002B4204 /* NappItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2F4E561A41FA5B002B4204 /* NappItemProvider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DE2F4E591A41FA5B002B4204 /* NappItemProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2F4E571A41FA5B002B4204 /* NappItemProvider.h */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +63,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1D55A71B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityMultiChannelTextItemProvider.h; sourceTree = "<group>"; };
+		0D1D55A81B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityMultiChannelTextItemProvider.m; sourceTree = "<group>"; };
+		0DB954731B3BB7CD0087BF8A /* SSArgumentsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSArgumentsParser.h; sourceTree = "<group>"; };
+		0DB954741B3BB7CD0087BF8A /* SSArgumentsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSArgumentsParser.m; sourceTree = "<group>"; };
+		0DB954771B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityMultiChannelImageItemProvider.h; sourceTree = "<group>"; };
+		0DB954781B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityMultiChannelImageItemProvider.m; sourceTree = "<group>"; };
+		0DB9547B1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityMultiChannelUrlItemProvider.h; sourceTree = "<group>"; };
+		0DB9547C1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityMultiChannelUrlItemProvider.m; sourceTree = "<group>"; };
+		0DB9547F1B3BF6AA0087BF8A /* SSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUtil.h; sourceTree = "<group>"; };
+		0DB954801B3BF6AA0087BF8A /* SSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUtil.m; sourceTree = "<group>"; };
+		0DB954831B3BF8010087BF8A /* SSActivityModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSActivityModule.h; sourceTree = "<group>"; };
+		0DB954841B3BF8010087BF8A /* SSActivityModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSActivityModule.m; sourceTree = "<group>"; };
+		0DB9548F1B3BF8910087BF8A /* SSNetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkModule.h; sourceTree = "<group>"; };
+		0DB954901B3BF8910087BF8A /* SSNetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkModule.m; sourceTree = "<group>"; };
+		0DE6CCC11B204D5000F8BE96 /* UIActivityLocationtemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityLocationtemProvider.h; sourceTree = "<group>"; };
+		0DE6CCC21B204D5000F8BE96 /* UIActivityLocationtemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityLocationtemProvider.m; sourceTree = "<group>"; };
 		24DD6CF71134B3F500162E58 /* DkNappSocialModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DkNappSocialModule.h; path = Classes/DkNappSocialModule.h; sourceTree = "<group>"; };
 		24DD6CF81134B3F500162E58 /* DkNappSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DkNappSocialModule.m; path = Classes/DkNappSocialModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
@@ -111,12 +143,28 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0D1D55A71B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.h */,
+				0D1D55A81B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.m */,
+				0DB954771B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.h */,
+				0DB954781B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.m */,
+				0DB9547B1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.h */,
+				0DB9547C1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.m */,
+				0DE6CCC11B204D5000F8BE96 /* UIActivityLocationtemProvider.h */,
+				0DE6CCC21B204D5000F8BE96 /* UIActivityLocationtemProvider.m */,
 				DE2F4E561A41FA5B002B4204 /* NappItemProvider.m */,
 				DE2F4E571A41FA5B002B4204 /* NappItemProvider.h */,
 				24DE9E0F11C5FE74003F90F6 /* DkNappSocialModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* DkNappSocialModuleAssets.m */,
+				0DB954731B3BB7CD0087BF8A /* SSArgumentsParser.h */,
+				0DB954741B3BB7CD0087BF8A /* SSArgumentsParser.m */,
 				24DD6CF71134B3F500162E58 /* DkNappSocialModule.h */,
 				24DD6CF81134B3F500162E58 /* DkNappSocialModule.m */,
+				0DB954831B3BF8010087BF8A /* SSActivityModule.h */,
+				0DB954841B3BF8010087BF8A /* SSActivityModule.m */,
+				0DB9548F1B3BF8910087BF8A /* SSNetworkModule.h */,
+				0DB954901B3BF8910087BF8A /* SSNetworkModule.m */,
+				0DB9547F1B3BF6AA0087BF8A /* SSUtil.h */,
+				0DB954801B3BF6AA0087BF8A /* SSUtil.m */,
 				B603B54B1700E18B002E4196 /* NappCustomActivity.h */,
 				B603B54C1700E18B002E4196 /* NappCustomActivity.m */,
 			);
@@ -142,10 +190,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* DkNappSocial_Prefix.pch in Headers */,
+				0DB954851B3BF8010087BF8A /* SSActivityModule.h in Headers */,
+				0DB954791B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.h in Headers */,
+				0DB954751B3BB7CD0087BF8A /* SSArgumentsParser.h in Headers */,
 				24DD6CF91134B3F500162E58 /* DkNappSocialModule.h in Headers */,
 				DE2F4E591A41FA5B002B4204 /* NappItemProvider.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* DkNappSocialModuleAssets.h in Headers */,
+				0DB9547D1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.h in Headers */,
+				0DE6CCC31B204D5000F8BE96 /* UIActivityLocationtemProvider.h in Headers */,
 				B603B54D1700E18B002E4196 /* NappCustomActivity.h in Headers */,
+				0DB954811B3BF6AA0087BF8A /* SSUtil.h in Headers */,
+				0D1D55A91B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.h in Headers */,
+				0DB954911B3BF8910087BF8A /* SSNetworkModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DD6CFA1134B3F500162E58 /* DkNappSocialModule.m in Sources */,
+				0DB9547A1B3BEA2A0087BF8A /* UIActivityMultiChannelImageItemProvider.m in Sources */,
+				0DB954861B3BF8010087BF8A /* SSActivityModule.m in Sources */,
+				0DE6CCC41B204D5000F8BE96 /* UIActivityLocationtemProvider.m in Sources */,
+				0DB9547E1B3BEA590087BF8A /* UIActivityMultiChannelUrlItemProvider.m in Sources */,
+				0D1D55AA1B26F38500B8AD53 /* UIActivityMultiChannelTextItemProvider.m in Sources */,
+				0DB954921B3BF8910087BF8A /* SSNetworkModule.m in Sources */,
+				0DB954821B3BF6AA0087BF8A /* SSUtil.m in Sources */,
+				0DB954761B3BB7CD0087BF8A /* SSArgumentsParser.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* DkNappSocialModuleAssets.m in Sources */,
 				DE2F4E581A41FA5B002B4204 /* NappItemProvider.m in Sources */,
 				B603B54E1700E18B002E4196 /* NappCustomActivity.m in Sources */,

@@ -1,1 +1,16 @@
 Place your change log text here.  This file will be incorporated with your app at package time.
+
+V1.8.2
+20150609 jebai
+1. support specify text for twitter or facebook channel
+
+{
+	"suject" : "subject for email",
+	"text"" : {
+		"twitter" : "share text to twitter",
+		"facebook" : "share text co facebook",
+		"common" : "share text to other channel exclude twitter and facebook"
+	},
+	"url" : "url to share",
+	"vcf" " "vcf url of location vcf file"
+}

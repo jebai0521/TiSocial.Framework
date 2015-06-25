@@ -12,9 +12,6 @@
 {
     ACAccountStore* accountStore;
 	UIPopoverController *popoverController;
-    
-    KrollCallback *successCallback;
-    KrollCallback *cancelCallback;
 }
 
 @property(nonatomic,readonly) NSNumber *ACTIVITY_FACEBOOK;
